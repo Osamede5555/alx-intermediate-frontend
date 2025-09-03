@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4">
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-3xl">Responsive Image Gallery</h1>
+  </header>
+
+  <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+    <!-- Section with flexbox items -->
+    <section class="lg:col-span-2 flex">
+      <div class="w-1/2 bg-red-200 p-4">Flexbox Item 1</div>
+      <div class="w-1/2 bg-red-400 p-4">Flexbox Item 2</div>
+    </section>
+
+    <aside class="bg-green-200 p-4">Sidebar</aside>
+  </main>
+
+  <!-- Image gallery section -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+    <img src="https://via.placeholder.com/300" class="w-full h-auto rounded-lg" alt="Gallery 1">
+    <img src="https://via.placeholder.com/300" class="w-full h-auto rounded-lg" alt="Gallery 2">
+    <img src="https://via.placeholder.com/300" class="w-full h-auto rounded-lg" alt="Gallery 3">
+    <img src="https://via.placeholder.com/300" class="w-full h-auto rounded-lg" alt="Gallery 4">
+    <img src="https://via.placeholder.com/300" class="w-full h-auto rounded-lg" alt="Gallery 5">
+    <img src="https://via.placeholder.com/300" class="w-full h-auto rounded-lg" alt="Gallery 6">
+  </section>
+
+  <footer class="bg-gray-800 text-white p-4 mt-4">
+    <p>&copy; 2024 John Doe's Blog</p>
+  </footer>
+</body>
+</html>
