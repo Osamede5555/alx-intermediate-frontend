@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhancing Form Accessibility</title>
+</head>
+<body>
+  <main>
+    <!-- Existing content from 2-index.html goes here -->
+
+    <!-- New section with accessible form -->
+    <section>
+      <h2 id="form-title">Contact Form</h2>
+      <form action="#" method="POST" aria-labelledby="form-title" role="form">
+        
+        <!-- Name field -->
+        <div>
+          <label for="name">Name:</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            aria-required="true">
+        </div>
+
+        <!-- Email field -->
+        <div>
+          <label for="email">Email:</label>
+          <input 
+            type="text" 
+            id="email" 
+            name="email" 
+            aria-required="true">
+        </div>
+
+        <!-- Submit button -->
+        <div>
+          <button type="submit" aria-label="Submit the form">
+            Submit
+          </button>
+        </div>
+
+        <!-- Live region for feedback -->
+        <div aria-live="polite" role="alert"></div>
+
+      </form>
+    </section>
+  </main>
+</body>
+</html>
