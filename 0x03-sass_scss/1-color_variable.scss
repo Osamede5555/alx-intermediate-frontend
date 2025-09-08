@@ -1,0 +1,11 @@
+// Define variable
+$main-color: #3D3D3D;
+
+// Apply variable to elements
+body {
+  color: $main-color;
+}
+
+p {
+  color: $main-color;
+}
