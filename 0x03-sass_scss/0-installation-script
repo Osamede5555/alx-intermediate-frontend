@@ -1,0 +1,9 @@
+# Verified Node.js installation
+node -v
+# Output: v22.14.0
+
+# Verified npm installation
+npm -v
+
+# Installed SASS version 3.7.4
+npm install sass@3.7.4
