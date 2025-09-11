@@ -36,16 +36,18 @@ console.log(director1);
 
 // 3. printTeacher function + interface
 interface printTeacherFunction {
-  (teacher: { firstName: string; lastName: string }): string;
+  (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
-  return `${firstName[0]}. ${lastName}`;
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  // create an object and immediately destructure it
+  const teacher = { firstName, lastName };
+  const { firstName: fName, lastName: lName } = teacher;
+
+  return `${fName[0]}. ${lName}`;
 };
 
-// Example
-console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
-
+console.log("Task 3", printTeacher("John", "Doe")); // J. Doe
 
 // 4. StudentClass with interfaces
 interface StudentClassConstructor {
