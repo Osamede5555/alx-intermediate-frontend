@@ -34,17 +34,16 @@ const director1: Directors = {
 console.log(director1);
 // Function type interface
 
-
 // 3. printTeacher function + interface
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName}. ${lastName}`;
+  return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-console.log(printTeacher("John", "Doe")); // J. Doe
+console.log("Task 1", printTeacher("John", "Doe")); // J. Doe
 
 // 4. StudentClass with interfaces
 interface StudentClassConstructor {
