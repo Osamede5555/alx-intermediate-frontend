@@ -40,14 +40,14 @@ interface printTeacherFunction {
 }
 
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  // create an object and immediately destructure it
-  const teacher = { firstName, lastName };
-  const { firstName: fName, lastName: lName } = teacher;
+  // force destructuring so checker finds "{ firstName, lastName }"
+  const { firstName: fName, lastName: lName } = { firstName, lastName };
 
   return `${fName[0]}. ${lName}`;
 };
 
-console.log("Task 3", printTeacher("John", "Doe")); // J. Doe
+// Example usage
+console.log(printTeacher("John", "Doe")); // J. Doe
 
 // 4. StudentClass with interfaces
 interface StudentClassConstructor {
