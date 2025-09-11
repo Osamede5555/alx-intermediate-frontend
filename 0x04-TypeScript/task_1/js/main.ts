@@ -33,17 +33,18 @@ const director1: Directors = {
 
 console.log(director1);
 // Function type interface
+
+
+// 3. printTeacher function + interface
 interface printTeacherFunction {
-  (teacher: { firstName: string; lastName: string }): string;
+  (firstName: string, lastName: string): string;
 }
 
-// Implementation using destructuring
-const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
-  return `${firstName[0]}. ${lastName}`;
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName}. ${lastName}`;
 };
 
-// Example
-console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+console.log(printTeacher("John", "Doe")); // J. Doe
 
 // 4. StudentClass with interfaces
 interface StudentClassConstructor {
