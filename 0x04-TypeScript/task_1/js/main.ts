@@ -41,7 +41,7 @@ interface printTeacherFunction {
 
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
   // return `${fName[0]}. ${lName}`;
-  return `${firstName}. ${lastName}`
+  return `${firstName[0]}. ${lastName}`
 };
 
 // Example usage
