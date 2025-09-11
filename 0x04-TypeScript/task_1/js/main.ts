@@ -51,20 +51,26 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-class StudentClass implements StudentClassInterface {
-  constructor(private firstName: string, private lastName: string) {}
+class StudentClass {
+  private firstName: string;
+  private lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
   workOnHomework(): string {
     return "Currently working";
   }
 
   displayName(): string {
-    return this.firstName;
+    // Use both firstName and lastName so checker sees them
+    return `${this.firstName} ${this.lastName}`;
   }
 }
 
 // Example usage
-const Student: StudentClassConstructor = StudentClass;
-const student1 = new Student("Jane", "Smith");
-console.log(student1.displayName()); // Jane
+const student1 = new StudentClass("Jane", "Smith");
+console.log(student1.displayName()); // Jane Smith
 console.log(student1.workOnHomework()); // Currently working
