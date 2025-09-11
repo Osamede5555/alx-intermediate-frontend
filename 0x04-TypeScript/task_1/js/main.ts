@@ -44,7 +44,7 @@ const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
 };
 
 // Example
-console.log("Task 3", printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
 
 
 // 4. StudentClass with interfaces
