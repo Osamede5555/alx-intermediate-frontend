@@ -9,10 +9,10 @@ interface Teacher {
 }
 
 const teacher3: Teacher = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: "John",
+  lastName: "Doe",
   fullTimeEmployee: false,
-  location: 'London',
+  location: "London",
   contract: false,
 };
 
@@ -24,25 +24,26 @@ interface Directors extends Teacher {
 }
 
 const director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
+  firstName: "John",
+  lastName: "Doe",
+  location: "London",
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
 
 console.log(director1);
-
-// 3. printTeacher function + interface
+// Function type interface
 interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+  (teacher: { firstName: string; lastName: string }): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
+// Implementation using destructuring
+const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
+  return `${firstName[0]}. ${lastName}`;
 };
 
-console.log(printTeacher("John", "Doe")); // J. Doe
+// Example
+console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
 
 // 4. StudentClass with interfaces
 interface StudentClassConstructor {
