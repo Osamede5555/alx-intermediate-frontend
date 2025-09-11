@@ -15,7 +15,6 @@ const teacher3: Teacher = {
   location: "London",
   contract: false,
 };
-
 console.log(teacher3);
 
 // 2. Directors interface extending Teacher
@@ -30,21 +29,17 @@ const director1: Directors = {
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
-
 console.log(director1);
-// Function type interface
 
 // 3. printTeacher function + interface
 interface printTeacherFunction {
-  ({ firstName, lastName }: { firstName: string; lastName: string }): string;
+  (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName[0]}. ${lastName}`;
 };
-
-// Example usage
-console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+console.log(printTeacher("John", "Doe")); // J. Doe
 
 // 4. StudentClass with interfaces
 interface StudentClassConstructor {
@@ -69,6 +64,7 @@ class StudentClass implements StudentClassInterface {
 }
 
 // Example usage
-const student1 = new StudentClass("Jane", "Smith");
+const Student: StudentClassConstructor = StudentClass;
+const student1 = new Student("Jane", "Smith");
 console.log(student1.displayName()); // Jane
 console.log(student1.workOnHomework()); // Currently working
