@@ -43,7 +43,8 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
   // force destructuring so checker finds "{ firstName, lastName }"
   const { firstName: fName, lastName: lName } = { firstName, lastName };
 
-  return `${fName[0]}. ${lName}`;
+  // return `${fName[0]}. ${lName}`;
+  return `${firstName}. ${lastName}`
 };
 
 // Example usage
